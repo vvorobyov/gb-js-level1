@@ -89,8 +89,19 @@ function Question(question){
 }
 
 
+
+/**
+ * Фабрика генерации вопросов
+ */
 function QuestionsFactory() {};
 
+
+/** 
+ * Метод получения заданного количества вопросов
+ * @param {Number} count - Количество вопросов которые необходимо вернуть
+ * 
+ * @returns {Array<Question>} - Массив вопросов
+*/
 QuestionsFactory.get_questions = function(count) {
     let question_list = questions.slice(),
         result = [];

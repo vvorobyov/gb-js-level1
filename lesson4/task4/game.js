@@ -1,12 +1,16 @@
 'use strict';
 
-function Game() {}
+const game = {};
 
-Game.prototype.run = function() {
-        // Бесконечный цикл
-        const palayer_name = prompt("Представьтесь. Как вас зовут?");
+/**
+ * Основной игровой цикл
+ */
+game.run = function() {
+    const palayer_name = prompt("Представьтесь. Как вас зовут?");
+    if (palayer_name){
         let start = confirm(`Готовы начать?`);
         game:
+        // Бесконечный цикл
         while(start){
             const player = new Player(palayer_name, 5);
             for (let question = player.get_question(), i=1; question !=null; i++, question = player.get_question()) {
@@ -35,14 +39,19 @@ Game.prototype.run = function() {
             );
             start = confirm('Хотите сыграть еще раз?');
         }
-        alert('Жаль что вы уходите.');
-        console.log('Игра окончена!')
-    };
+    }
+    alert('Жаль что вы уходите.');
+    console.log('Игра окончена!')
+};
 
-Game.init = function init() {
+
+/** 
+ * Метод инициализации игры
+*/
+game.init = function init() {
     console.log("Добро пожаловать в игру кто хочет стать Милиционером");
     console.log("Чтобы начать игру наберите game.run() и нажмите Enter.");
-    window.game = new Game();
 }
 
-Game.init()
+game.init();
+
