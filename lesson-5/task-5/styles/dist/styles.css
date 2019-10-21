@@ -1,0 +1,51 @@
+.b-chessBoard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30px (50px)[8];
+      grid-template-columns: 30px repeat(8, 50px);
+  -ms-grid-rows: 30px (50px)[8];
+      grid-template-rows: 30px repeat(8, 50px);
+}
+
+.b-chessBoard :nth-child(2n-1) {
+  background: #fcd09e;
+}
+
+.b-chessBoard :nth-child(2n) {
+  background: #ca7f0f;
+}
+
+.b-chessBoard :nth-child(9n) {
+  border-right: 2px solid black;
+}
+
+.b-chessBoard :nth-child(9n+1) {
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  background: #fff;
+}
+
+.b-chessBoard :nth-child(-n+9) {
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  background: #fff;
+}
+
+.b-chessBoard :nth-child(n+73) {
+  border-bottom: 2px solid black;
+}
+
+.b-chessBoard__legend {
+  color: #000;
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=styles.css.map */

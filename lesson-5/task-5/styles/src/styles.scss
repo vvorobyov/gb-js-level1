@@ -1,0 +1,39 @@
+.b-chessBoard {
+    display: grid;
+    grid-template-columns: 30px repeat(8, 50px);
+    grid-template-rows: 30px repeat(8, 50px);
+
+    
+    :nth-child(2n-1){
+        background: rgb(252, 208, 158);
+    }
+    :nth-child(2n){
+        background: rgb(202, 127, 15);
+    }
+    :nth-child(9n){
+        border-right: 2px solid black;
+    }
+    :nth-child(9n+1){
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+        background: #fff;
+    }
+
+    :nth-child(-n+9){
+        border-bottom: 2px solid black;
+        border-top: 2px solid black;
+        background: #fff;
+    }
+    :nth-child(n+73){
+        border-bottom: 2px solid black;
+    }
+
+    &__legend {
+        color: #000;
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
