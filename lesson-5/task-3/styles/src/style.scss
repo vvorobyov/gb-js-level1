@@ -1,0 +1,46 @@
+.b-modal{
+    display: flex;
+    background: #44444470;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+    &__window {
+        position: relative;
+        width: 400px;
+        max-width: calc(100vw - 10px);
+        max-height: calc(100vh - 10px);
+        box-sizing: border-box;
+        background: #fff;
+        padding: 16px;
+        box-shadow: 0 0 6px 5px grey ;
+        border-radius: 8px;
+        overflow: hidden;
+        animation-duration: 1s;
+    }
+
+    &__title {
+        margin: 0 16px 10px 0;
+        
+        text-align: center;
+    }
+
+    &__content {
+        overflow: auto;
+        height: 100%;
+    }
+
+    &__closeBtn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        border-radius: 50%;
+        &:hover {
+            box-shadow: 0 0 6px 1px rgb(129, 129, 129) ;
+        }
+    }
+}
